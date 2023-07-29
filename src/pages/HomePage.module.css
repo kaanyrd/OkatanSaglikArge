@@ -1,0 +1,50 @@
+.banner {
+  min-height: calc(100vh - 5rem);
+  background: url("../Assets/bannerRet.png") center/cover no-repeat fixed;
+}
+.secondBanner {
+  min-height: 100vh;
+  background: linear-gradient(rgba(4, 4, 5, 0.6), rgba(4, 4, 5, 0.6)),
+    url("../Assets/Gaja3d.png") center/cover no-repeat fixed;
+}
+.thirdBanner {
+  min-height: 100vh;
+  background: linear-gradient(rgba(4, 4, 5, 0.6), rgba(4, 4, 5, 0.6)),
+    url("../Assets/Banner3.jpg") center/cover no-repeat fixed;
+}
+.isBirliklerimiz {
+  border: 3px solid black;
+  padding: 4rem 0;
+  background: #00060f;
+}
+.isBirliklerimizContent {
+  max-width: 1270px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.isBirliklerimizContent > h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+.icons {
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+}
+.icons > * {
+  border: 2px solid white;
+  height: 102px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  padding: 1rem;
+}
+.icons > *:hover {
+  opacity: 1;
+}
+.icon {
+  height: 100%;
+  object-fit: contain;
+}

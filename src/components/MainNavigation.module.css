@@ -1,0 +1,32 @@
+.navbar {
+  /* border: 3px solid black; */
+  height: 5rem;
+  background: transparent;
+}
+.navbarContent {
+  /* border: 3px solid red; */
+  max-width: 1270px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.links {
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: none;
+}
+.navbarContent > * {
+  /* border: 3px solid green; */
+}
+.icon {
+  width: 70px;
+  height: 70px;
+}
+@media screen and (min-width: 678px) {
+  .links {
+    display: block;
+  }
+}
