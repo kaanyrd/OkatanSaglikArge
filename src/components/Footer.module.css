@@ -1,6 +1,6 @@
 .footer {
   background-color: #112255;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 .footerContent {
   max-width: 1170px;
@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  /* border: 3px solid white; */
 }
 .topLeftSide {
   /* border: 3px solid white; */
@@ -36,7 +37,7 @@
   border: 3px solid white;
   padding: 0.4rem 1.2rem;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   transition: all 0.2s ease-in;
 }
 .contactBtn > a:hover {
@@ -45,9 +46,10 @@
 }
 .socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  font-weight: bolder;
+  gap: 0.5rem 1.5rem;
+  justify-content: center;
 }
 .socials > a {
   color: white;
@@ -63,13 +65,39 @@
   row-gap: 0.5rem;
   text-align: center;
 }
-
+.adress > h3 {
+  margin-bottom: 0.5rem;
+}
 .mailToBtn {
   color: white;
   text-decoration: underline;
   text-align: center;
 }
 .bottomSide {
-  margin-top: 2rem;
   text-align: center;
+}
+.contactSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2rem auto 2rem auto;
+}
+@media screen and (min-width: 768px) {
+  .topSide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  .socials {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 1.5rem 0;
+  }
 }
