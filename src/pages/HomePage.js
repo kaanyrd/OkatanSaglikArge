@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./HomePage.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InterpreterModeIcon from "@mui/icons-material/InterpreterMode";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import SettingsIcon from "@mui/icons-material/Settings";

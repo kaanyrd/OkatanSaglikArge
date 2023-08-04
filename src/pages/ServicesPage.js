@@ -186,9 +186,6 @@ function ServicesPage() {
               <li>Projenin yönetilmesi.</li>
             </ul>
             <p>Tüm bu süreçler OKATAN SAĞLIK ARGE tarafından tamamlanır.</p>
-            <div>
-              <img />
-            </div>
           </div>
         </div>
       </div>
