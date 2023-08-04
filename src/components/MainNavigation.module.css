@@ -1,7 +1,9 @@
 .navbar {
   /* border: 3px solid black; */
   height: 5rem;
-  background: transparent;
+  /* background: transparent; */
+  background-color: #00060f;
+  border-bottom: 2px solid rgb(135, 134, 134);
 }
 .navbarContent {
   /* border: 3px solid red; */
@@ -18,6 +20,15 @@
   flex-wrap: wrap; */
   display: none;
 }
+.links > li > a {
+  color: white;
+  transition: all 0.2s linear;
+}
+.links > li > a.active {
+  color: rgb(151, 151, 245);
+  border-bottom: 2px solid rgb(151, 151, 245);
+  padding-bottom: 0.5rem;
+}
 .navbarContent > * {
   /* border: 3px solid green; */
 }
@@ -25,8 +36,38 @@
   width: 70px;
   height: 70px;
 }
-@media screen and (min-width: 678px) {
+.barButton {
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem;
+  transition: all 0.2s ease-in;
+}
+.barButtonSelf {
+  display: block;
+}
+.barButton:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 768px) {
   .links {
-    display: block;
+    /* border: 3px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+  .links > * {
+    /* border: 3px solid red; */
+    font-size: 1.05rem;
+    border-right: 2px solid white;
+    padding-right: 1rem;
+  }
+  .links > *:last-child {
+    border: none;
+  }
+  .barButton {
+    display: none;
   }
 }
