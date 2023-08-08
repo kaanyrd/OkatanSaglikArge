@@ -37,15 +37,16 @@
   height: 70px;
 }
 .barButton {
-  border: 2px solid white;
   color: white;
   cursor: pointer;
   border-radius: 5px;
   padding: 0.2rem;
   transition: all 0.2s ease-in;
+  display: block;
 }
 .barButtonSelf {
   display: block;
+  transform: scale(1.25);
 }
 .barButton:hover {
   transform: scale(1.1);

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./ServicesPage.module.css";
+import { useDispatch } from "react-redux";
+import { barActions } from "../store/side-slice";
 
 function ServicesPage() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(barActions.closeBar());
+  }, [dispatch]);
+
   return (
     <div className={classes.services}>
       <h1>Hizmetlerimiz</h1>

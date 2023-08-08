@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./SideBar.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { barActions } from "../store/side-slice";
+import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 
 function SideBar() {
   const dispatch = useDispatch();
@@ -15,8 +17,23 @@ function SideBar() {
   return (
     <div className={classes.sideBar}>
       <div className={classes.sideBarContent}>
-        <h1>Here is the sidebar</h1>
-        <button onClick={onBarCloseHandler}>X</button>
+        <div onClick={onBarCloseHandler} className={classes.closeIcon}>
+          <CloseIcon />
+        </div>
+        <ul className={classes.links}>
+          <li>
+            <Link to="/">Ana Sayfa</Link>
+          </li>
+          <li>
+            <Link to="/services">Hizmetlerimiz</Link>
+          </li>
+          <li>
+            <Link to="/aboutus">Hakkımızda</Link>
+          </li>
+          <li>
+            <Link to="/contact">İletişim</Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

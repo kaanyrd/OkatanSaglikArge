@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./HomePage.module.css";
 import { useNavigate } from "react-router-dom";
 import InterpreterModeIcon from "@mui/icons-material/InterpreterMode";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AdUnitsIcon from "@mui/icons-material/AdUnits";
+import { useDispatch } from "react-redux";
+import { barActions } from "../store/side-slice";
 
 function HomePage() {
   const navigation = useNavigate();
@@ -12,6 +14,12 @@ function HomePage() {
   const onTranslateHandler = () => {
     navigation("/services");
   };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(barActions.closeBar());
+  }, [dispatch]);
 
   return (
     <div className={classes.content}>

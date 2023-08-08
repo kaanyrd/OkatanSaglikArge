@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Contact.module.css";
+import { barActions } from "../store/side-slice";
+import { useDispatch } from "react-redux";
 
 function Contact() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(barActions.closeBar());
+  }, [dispatch]);
+
   return (
     <div className={classes.content}>
       <h1>Bizimle İletişime Geçin</h1>
@@ -33,9 +41,11 @@ function Contact() {
           </div>
           <div className={classes.formControl}>
             <label>Mesajınızı buraya yazınız...</label>
-            <textarea />
+            <textarea maxLength="300" className={classes.textArea} />
           </div>
-          <button type="submit">Gönder</button>
+          <button className={classes.submitBtn} type="submit">
+            Gönder
+          </button>
         </form>
       </div>
     </div>

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./AboutPage.module.css";
+import { useDispatch } from "react-redux";
+import { barActions } from "../store/side-slice";
 
 function AboutusPage() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(barActions.closeBar());
+  }, [dispatch]);
+
   return (
     <div className={classes.about}>
       <div className={classes.aboutContent}>
