@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import icon from "../Assets/OkatanArgeIcon.png";
 import classes from "./MainNavigation.module.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
@@ -17,9 +17,9 @@ function MainNavigation() {
   return (
     <div className={classes.navbar}>
       <div className={classes.navbarContent}>
-        <div className={classes.icon}>
+        <Link to="/" className={classes.icon}>
           <img className={classes.iconSelf} src={icon} alt="icon" />
-        </div>
+        </Link>
         <ul className={classes.links}>
           <li>
             <NavLink
