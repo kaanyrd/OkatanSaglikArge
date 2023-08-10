@@ -7,6 +7,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AdUnitsIcon from "@mui/icons-material/AdUnits";
 import { useDispatch } from "react-redux";
 import { barActions } from "../store/side-slice";
+import { motion } from "framer-motion";
 
 function HomePage() {
   const navigation = useNavigate();
@@ -23,7 +24,24 @@ function HomePage() {
 
   return (
     <div className={classes.content}>
-      <div className={classes.banner}></div>
+      <div className={classes.banner}>
+        <div className={classes.bannerContent}>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className={classes.bannerText}
+          >
+            <h1>OKATAN SAĞLIK</h1>
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className={classes.bannerText}
+          >
+            <h1>ARGE</h1>
+          </motion.h1>
+        </div>
+      </div>
       <div className={classes.secondBanner}>
         <div className={classes.secondBannerContent}>
           <h1 className={classes.bannerTitle}>Biz Kimiz ?</h1>

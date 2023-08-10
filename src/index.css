@@ -5,6 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
   letter-spacing: 0.6px;
+  scroll-behavior: smooth;
 }
 img {
   width: 100%;

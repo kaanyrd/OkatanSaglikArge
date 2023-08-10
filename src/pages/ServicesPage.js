@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classes from "./ServicesPage.module.css";
 import { useDispatch } from "react-redux";
 import { barActions } from "../store/side-slice";
+import { motion } from "framer-motion";
 
 function ServicesPage() {
   const dispatch = useDispatch();
@@ -12,8 +13,17 @@ function ServicesPage() {
 
   return (
     <div className={classes.services}>
-      <h1>Hizmetlerimiz</h1>
-      <div className={classes.servicesContent}>
+      <motion.h1
+        initial={({ opacity: 0 }, { y: "1%" })}
+        animate={({ opacity: 1 }, { y: "0%" })}
+      >
+        Hizmetlerimiz
+      </motion.h1>
+      <motion.div
+        initial={({ opacity: 0 }, { y: "1%" })}
+        animate={({ opacity: 1 }, { y: "0%" })}
+        className={classes.servicesContent}
+      >
         <div className={classes.service}>
           <h1>Bilimsel Proje Danışmanlığı</h1>
           <p>
@@ -196,7 +206,7 @@ function ServicesPage() {
             <p>Tüm bu süreçler OKATAN SAĞLIK ARGE tarafından tamamlanır.</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

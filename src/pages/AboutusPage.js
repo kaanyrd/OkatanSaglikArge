@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classes from "./AboutPage.module.css";
 import { useDispatch } from "react-redux";
 import { barActions } from "../store/side-slice";
+import { motion } from "framer-motion";
 
 function AboutusPage() {
   const dispatch = useDispatch();
@@ -12,7 +13,11 @@ function AboutusPage() {
 
   return (
     <div className={classes.about}>
-      <div className={classes.aboutContent}>
+      <motion.div
+        initial={({ opacity: 0 }, { y: "1%" })}
+        animate={({ opacity: 1 }, { y: "0%" })}
+        className={classes.aboutContent}
+      >
         <div className={classes.about1}>
           <h1 className={classes.aboutUsTitle}>Hakkımızda</h1>
           <div className={classes.pSide}>
@@ -63,7 +68,7 @@ function AboutusPage() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

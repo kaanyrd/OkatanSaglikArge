@@ -3,6 +3,8 @@
   color: white;
   min-height: calc(100vh - 5rem);
   padding: 1rem 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+    url("../Assets/ContactUs.jpg") center/cover no-repeat;
 }
 .content > h1 {
   text-align: center;
@@ -37,7 +39,7 @@
   border-radius: 10px;
 }
 .formControl > label {
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-size: 1.2rem;
 }
 .formControl > input {
@@ -45,7 +47,10 @@
   /* border-radius: 5px; */
   border: none;
   padding-left: 0.2rem;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
+}
+.formControl > input:focus {
+  border-bottom: 3px solid black;
 }
 .formControl > input:focus {
   outline: none;
@@ -75,4 +80,19 @@
 }
 .submitBtn:hover {
   background-color: rgb(56, 56, 255);
+}
+
+@media screen and (min-width: 768px) {
+  .content > h1 {
+    text-align: start;
+    margin-left: 5vw;
+    font-size: 2.5rem;
+  }
+  .contactContent {
+    width: 50%;
+    margin-left: 5%;
+  }
+  .content {
+    padding-bottom: 4rem;
+  }
 }

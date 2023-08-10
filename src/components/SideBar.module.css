@@ -9,19 +9,23 @@
   /* border: 3px solid red; */
   display: grid;
   place-items: center;
+  transition: all 0.2s ease-in;
 }
+
 .sideBarContent {
-  /* border: 3px solid black; */
+  display: block;
 }
+
 .closeIcon {
-  border: 3px solid white;
+  /* border: 3px solid white; */
   position: absolute;
-  top: 2%;
+  top: 5%;
   right: 5%;
   cursor: pointer;
   border-radius: 5px;
   color: white;
   transition: all 0.2s ease-in-out;
+  display: block;
 }
 .closeIcon:hover {
   background-color: white;
@@ -45,7 +49,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.links > li > a:hover {
+.links > li > a.active {
   transform: scale(1.15);
   color: rgb(167, 167, 255);
 }

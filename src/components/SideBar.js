@@ -2,13 +2,13 @@ import React from "react";
 import classes from "./SideBar.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { barActions } from "../store/side-slice";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 
 function SideBar() {
   const dispatch = useDispatch();
-  const sideBar = useSelector((state) => state.sideBar.bar);
-  console.log(sideBar);
+  const sideBarHandler = useSelector((state) => state.sideBar.bar);
+  console.log(sideBarHandler);
 
   const onBarCloseHandler = () => {
     dispatch(barActions.closeBar());
@@ -22,16 +22,44 @@ function SideBar() {
         </div>
         <ul className={classes.links}>
           <li>
-            <Link to="/">Ana Sayfa</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.active : "undefined"
+              }
+              to="/"
+            >
+              Ana Sayfa
+            </NavLink>
           </li>
           <li>
-            <Link to="/services">Hizmetlerimiz</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.active : "undefined"
+              }
+              to="/services"
+            >
+              Hizmetlerimiz
+            </NavLink>
           </li>
           <li>
-            <Link to="/aboutus">Hakkımızda</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.active : "undefined"
+              }
+              to="/aboutus"
+            >
+              Hakkımızda
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">İletişim</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.active : "undefined"
+              }
+              to="/contact"
+            >
+              İletişim
+            </NavLink>
           </li>
         </ul>
       </div>

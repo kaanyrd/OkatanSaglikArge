@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classes from "./Contact.module.css";
 import { barActions } from "../store/side-slice";
 import { useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
 function Contact() {
   const dispatch = useDispatch();
@@ -12,8 +13,17 @@ function Contact() {
 
   return (
     <div className={classes.content}>
-      <h1>Bizimle İletişime Geçin</h1>
-      <div className={classes.contactContent}>
+      <motion.h1
+        initial={({ opacity: 0 }, { x: "-5%" })}
+        animate={({ opacity: 1 }, { x: "0%" })}
+      >
+        Bizimle İletişime Geçin
+      </motion.h1>
+      <motion.div
+        initial={({ opacity: 0 }, { y: "1%" })}
+        animate={({ opacity: 1 }, { y: "0%" })}
+        className={classes.contactContent}
+      >
         <form className={classes.form}>
           <div className={classes.formControl}>
             <label>İsim</label>
@@ -47,7 +57,7 @@ function Contact() {
             Gönder
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }
