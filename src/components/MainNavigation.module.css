@@ -4,6 +4,11 @@
   /* background: transparent; */
   background-color: #00060f;
   border-bottom: 2px solid rgb(135, 134, 134);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 .navbarContent {
   /* border: 3px solid red; */
@@ -28,9 +33,6 @@
   color: rgb(151, 151, 245);
   border-bottom: 2px solid rgb(151, 151, 245);
   padding-bottom: 0.5rem;
-}
-.navbarContent > * {
-  /* border: 3px solid green; */
 }
 .icon {
   width: 70px;
@@ -58,7 +60,7 @@
     align-items: center;
     justify-content: center;
     -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
   .links > * {
     /* border: 3px solid red; */

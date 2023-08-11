@@ -1,21 +1,21 @@
 import React from "react";
 import classes from "./SideBar.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+// import { useSelector } from "react-redux";
 import { barActions } from "../store/side-slice";
 import { NavLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 
 function SideBar() {
   const dispatch = useDispatch();
-  const sideBarHandler = useSelector((state) => state.sideBar.bar);
-  console.log(sideBarHandler);
+  // const sideBarHandler = useSelector((state) => state.sideBar.bar);
 
   const onBarCloseHandler = () => {
     dispatch(barActions.closeBar());
   };
 
   return (
-    <div className={classes.sideBar}>
+    <div>
       <div className={classes.sideBarContent}>
         <div onClick={onBarCloseHandler} className={classes.closeIcon}>
           <CloseIcon />

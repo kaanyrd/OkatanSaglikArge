@@ -11,24 +11,25 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function RootLayout() {
   const sideBar = useSelector((state) => state.sideBar.bar);
-  console.log(`Root içerisi: ${sideBar}`);
 
   return (
     <>
       <AnimatePresence>
         {sideBar && (
-          <div>
+          <>
             {ReactDOM.createPortal(
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: "0" }}
+                animate={{ opacity: "1" }}
+                exit={{ opacity: "0" }}
+                className={classes.sideBar}
               >
                 <SideBar />
               </motion.div>,
+
               document.getElementById("sidebar")
             )}
-          </div>
+          </>
         )}
       </AnimatePresence>
       <main>

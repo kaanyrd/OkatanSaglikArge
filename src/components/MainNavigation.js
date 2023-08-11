@@ -3,13 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import icon from "../Assets/OkatanArgeIcon.png";
 import classes from "./MainNavigation.module.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { barActions } from "../store/side-slice";
 
 function MainNavigation() {
   const dispatch = useDispatch();
-  const sideBar = useSelector((state) => state.sideBar.bar);
-  console.log(sideBar);
 
   const onBarOpenHandler = () => {
     dispatch(barActions.openBar());

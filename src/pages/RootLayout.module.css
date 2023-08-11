@@ -1,3 +1,17 @@
 .main {
+  margin-top: 5rem;
   min-height: calc(100vh - 5rem);
+}
+.sideBar {
+  background-color: #00060f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  /* border: 3px solid red; */
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease-in;
 }
