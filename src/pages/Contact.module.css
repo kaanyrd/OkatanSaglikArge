@@ -3,7 +3,8 @@
   color: white;
   min-height: calc(100vh - 5rem);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
-    url("../Assets/ContactUs.jpg") center/cover no-repeat;
+    url("https://www.paceconsulting.ae/sites/default/files/2020-10/Depositphotos_212262180_xl-2015_0.jpg")
+      center/cover no-repeat;
 }
 .horizontal > h1 {
   text-align: center;
@@ -89,7 +90,7 @@
     font-size: 2.5rem;
   }
   .contactContent {
-    max-width: 700px;
+    max-width: 600px;
     width: 90vw;
   }
 
