@@ -180,6 +180,23 @@ function ServicesPage() {
           </p>
         </div>
         <div className={classes.service}>
+          <h3 className={classes.okatansaglikargeP}>
+            - Alzheimer hastaları için geliştirdiğimiz yapay zeka destekli
+            çözümler sunuyoruz.
+          </h3>
+          <p>
+            <span className={classes.firstLetter}>Yapay</span> zeka destekli
+            özellikle yaşlı kişilerin veya hastaların yaşamlarını
+            kolaylaştıracak çözümler sunuyoruz. Bu çalışmamızla ilgili firmamız
+            ile iletişime geçebilirsiniz.
+          </p>
+          <br />
+          <p>
+            <span className={classes.firstLetter}>Eğitim</span> alanında yapay
+            zeka destekli öğterim ve sınav yöntemlerimizi tanımak için arayın.
+          </p>
+        </div>
+        <div className={classes.service}>
           <h1>Bilgi Teknolojileri Danışmanlığı</h1>
           <p className={classes.okatansaglikargeP}>
             {" "}
