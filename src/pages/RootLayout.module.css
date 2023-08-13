@@ -15,3 +15,8 @@
   place-items: center;
   transition: all 0.2s ease-in;
 }
+@media screen and (min-width: 768px) {
+  .sideBar {
+    display: none;
+  }
+}
