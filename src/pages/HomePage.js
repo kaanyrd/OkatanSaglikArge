@@ -36,6 +36,13 @@ function HomePage() {
               <h1>OKATAN SAĞLIK</h1>
             </motion.h1>
             <motion.h1
+              className={classes.andItem}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              &
+            </motion.h1>
+            <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className={classes.bannerText}
