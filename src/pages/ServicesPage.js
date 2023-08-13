@@ -193,7 +193,8 @@ function ServicesPage() {
           <br />
           <p>
             <span className={classes.firstLetter}>Eğitim</span> alanında yapay
-            zeka destekli öğterim ve sınav yöntemlerimizi tanımak için arayın.
+            zeka destekli öğterim ve sınav yöntemlerimizi tanımak için iletişime
+            geçebiliriniz.
           </p>
         </div>
         <div className={classes.service}>

@@ -44,14 +44,14 @@
 
 .links > li > a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   transition: all 0.2s ease-in-out;
 }
 
 .links > li > a.active {
   transform: scale(1.15);
-  color: rgb(167, 167, 255);
+  color: rgb(137, 137, 251);
 }
 
 @media screen and (min-width: 768px) {

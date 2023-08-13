@@ -2,32 +2,50 @@
   min-height: calc(100vh - 5rem);
   background: #00060f;
   word-wrap: break-word;
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid gray;
+  display: grid;
 }
 .bannerContent {
   max-width: 1170px;
   width: 90vw;
   margin: 0 auto;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
+
 .bannerText {
   color: white;
   width: 100%;
   border-radius: 10px;
   font-size: 1.7rem;
+  text-align: center;
 }
-.bannerText > h1 {
-  /* font-size: 2rem; */
+.bannerBottomContent {
+  color: white;
+  text-align: center;
+}
+
+.bottomArrow {
+  display: inline-block;
+  color: white;
+  opacity: 0.5;
+  animation-name: bottomArrow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .secondBanner {
   min-height: 100vh;
   background: linear-gradient(rgba(4, 4, 5, 1), rgba(4, 4, 5, 0.6)),
     url("../Assets/Gaja3d.png") center/cover no-repeat fixed;
+  border-bottom: 1px solid gray;
 }
 .thirdBanner {
   min-height: 100vh;
   background: linear-gradient(rgba(4, 4, 5, 1), rgba(4, 4, 5, 0.6)),
     url("../Assets/Banner3.jpg") center/cover no-repeat fixed;
+  border-bottom: 1px solid gray;
 }
 .isBirliklerimiz {
   border: 3px solid black;
@@ -179,5 +197,20 @@
   }
   .banner {
     background: url("../Assets/bannerRet.png") center/cover no-repeat fixed;
+  }
+}
+
+@keyframes bottomArrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
   }
 }

@@ -31,18 +31,19 @@
   text-align: center;
   margin: 0 auto;
 }
-.contactBtn > a {
-  color: white;
+.contactBtn > button {
+  color: #112255;
   font-size: 1.3rem;
   border: 3px solid white;
   padding: 0.4rem 1.2rem;
   border-radius: 10px;
   /* margin-bottom: 1rem; */
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
-.contactBtn > a:hover {
-  background-color: white;
-  color: #112255;
+.contactBtn > button:hover {
+  background-color: #112255;
+  color: white;
 }
 .socials {
   display: flex;
@@ -54,9 +55,6 @@
 .socials > a {
   color: white;
   text-decoration: underline;
-}
-.topLeftSide > * {
-  /* border: 3px solid red; */
 }
 .adress {
   /* border: 3px solid white; */
@@ -87,13 +85,18 @@
   background-color: #fff;
   margin: 2rem auto 2rem auto;
 }
+.developer {
+  border-bottom: 3px solid white;
+  width: fit-content;
+  margin: 0.5rem auto;
+}
 @media screen and (min-width: 768px) {
   .topSide {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    column-gap: 2rem;
   }
   .socials {
     flex-direction: column;

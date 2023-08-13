@@ -8,6 +8,7 @@ import AdUnitsIcon from "@mui/icons-material/AdUnits";
 import { useDispatch } from "react-redux";
 import { barActions } from "../store/side-slice";
 import { motion } from "framer-motion";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 function HomePage() {
   const navigation = useNavigate();
@@ -26,20 +27,28 @@ function HomePage() {
     <div className={classes.content}>
       <div className={classes.banner}>
         <div className={classes.bannerContent}>
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={classes.bannerText}
-          >
-            <h1>OKATAN SAĞLIK</h1>
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={classes.bannerText}
-          >
-            <h1>ARGE</h1>
-          </motion.h1>
+          <div className={classes.bannerTopContent}>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={classes.bannerText}
+            >
+              <h1>OKATAN SAĞLIK</h1>
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={classes.bannerText}
+            >
+              <h1>ARGE</h1>
+            </motion.h1>
+          </div>
+          <div className={classes.bannerBottomContent}>
+            <h2>Daha fazlası için kaydır...</h2>
+            <h1 className={classes.bottomArrow}>
+              <KeyboardDoubleArrowDownIcon sx={{ fontSize: 50 }} />
+            </h1>
+          </div>
         </div>
       </div>
       <div className={classes.secondBanner}>

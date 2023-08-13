@@ -1,8 +1,16 @@
 import React from "react";
 import classes from "./Footer.module.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const navigate = useNavigate();
+  const contactNavigateHandler = () => {
+    navigate("/contact");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={classes.footer}>
       <div className={classes.footerContent}>
@@ -24,7 +32,7 @@ function Footer() {
               </a>
               <a
                 className={classes.mailToBtn}
-                href="mailto:info@okatanarge.com?subject=Selamlar Ali Okatan!%20!"
+                href="mailto:info@okatanarge.com?subject=Selamlar Ali Okatan%20!"
               >
                 Mail Gönder
               </a>
@@ -39,7 +47,7 @@ function Footer() {
               </h3>
               <div className={classes.contactSide}>
                 <div className={classes.contactBtn}>
-                  <Link to="/contact">İletişim</Link>
+                  <button onClick={contactNavigateHandler}>İletişim</button>
                 </div>
               </div>
             </div>
@@ -48,7 +56,10 @@ function Footer() {
         <div className={classes.divider}></div>
         <div className={classes.bottomSide}>
           <p>
-            &copy; 2023 by OKATAN ARGE. Proudly created by <p>KAAN YARDIMCI</p>
+            &copy; {currentYear} by OKATAN ARGE. Proudly created by{" "}
+            <p className={classes.developer}>
+              <b>KAAN YARDIMCI</b>
+            </p>
           </p>
         </div>
       </div>
