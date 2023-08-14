@@ -96,19 +96,19 @@ function HomePage() {
               <span>
                 <PsychologyIcon className={classes.serviceIcon} />
               </span>
-              <h2>Bilimsel Proje Danışmanlığı</h2>
+              <h2>Akademik Akreditasyon Danışmanlığı</h2>
             </div>
             <div>
               <span>
                 <SettingsIcon className={classes.serviceIcon} />
               </span>
-              <h2>Bilimsel Proje Danışmanlığı</h2>
+              <h2>Araştırma Geliştirme Projeleri</h2>
             </div>
             <div>
               <span>
                 <AdUnitsIcon className={classes.serviceIcon} />
               </span>
-              <h2>Bilimsel Proje Danışmanlığı</h2>
+              <h2>Bilgi Teknolojileri Danışmanlığı</h2>
             </div>
           </div>
           <div className={classes.serviceLinkBtn}>
