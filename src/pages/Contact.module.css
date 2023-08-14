@@ -2,9 +2,7 @@
   background-color: #00060f;
   color: white;
   min-height: calc(100vh - 5rem);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
-    url("https://www.paceconsulting.ae/sites/default/files/2020-10/Depositphotos_212262180_xl-2015_0.jpg")
-      center/cover no-repeat;
+  background-color: #00060f;
 }
 .horizontal > h1 {
   text-align: center;
@@ -84,6 +82,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .content {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+      url("https://www.carmeuse.com/sites/default/files/styles/facebook_share/public/2020-02/contact%20us.png?itok=xPq2DVbi")
+        /* url("https://www.paceconsulting.ae/sites/default/files/2020-10/Depositphotos_212262180_xl-2015_0.jpg") */
+        center/cover no-repeat;
+  }
   .content > h1 {
     /* text-align: start; */
     /* margin: 0 auto; */
